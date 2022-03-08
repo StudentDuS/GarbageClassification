@@ -1,11 +1,11 @@
-// pages/index/index.js
+// pages/navigation/navigation.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    message:"这是一个绑定信息"
+
   },
 
   /**

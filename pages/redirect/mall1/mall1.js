@@ -1,18 +1,18 @@
-// pages/index/index.js
+// pages/redirect/maill1/maill1.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    message:"这是一个绑定信息"
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options);
   },
 
   /**

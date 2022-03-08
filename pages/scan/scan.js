@@ -1,11 +1,11 @@
-// pages/index/index.js
+// pages/scan/scan.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    message:"这是一个绑定信息"
+
   },
 
   /**
@@ -62,5 +62,15 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  /** 
+   * 绑定点击事件，
+   *打开摄像头
+  */
+ 
+  clickMe:function (){
+    wx.navigateTo({
+      url: '/pages/redirect/camera/camera',
+    })
   }
 })

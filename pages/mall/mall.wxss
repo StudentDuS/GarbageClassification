@@ -1,0 +1,41 @@
+/* pages/mall/mall.wxss */
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.item {
+  height: 300rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+#t {
+  margin-bottom: 200rpx;
+}
+.sp {
+  width: 400rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.title {
+  text-align: center;
+  font-size: 40rpx;
+  color: green;
+}
+
+.item image {
+  height: 400rpx;
+  width: 400rpx;
+
+}
+
+.name {
+  text-align: center;
+  color: green;
+}

@@ -1,0 +1,9 @@
+<!--pages/redirect/maill1/maill1.wxml-->
+
+<view>
+  <text>兑换商品详情</text>
+</view>
+<view>
+<image src="/static/img/商品A.png"></image>
+</view>
+<view>点击兑换</view>

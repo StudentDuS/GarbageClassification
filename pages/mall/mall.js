@@ -1,11 +1,11 @@
-// pages/index/index.js
+// pages/mall/mall.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    message:"这是一个绑定信息"
+
   },
 
   /**
@@ -62,5 +62,26 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  /**
+  * 点击绑定的事件
+  */
+  clickMe: function (e) {
+
+    var nid = e.currentTarget.dataset.nid;
+    if (nid=="1"){
+      wx.navigateTo({
+        url: '/pages/redirect/mall1/mall1?id='+nid,
+      });
+    }
+    else if (nid=="2")
+    {
+      wx.navigateTo({
+        url: '/pages/redirect/mall2/mall2?id='+nid,
+      });
+    }
+    //console.log(nid)
+    //跳转
+      
   }
 })

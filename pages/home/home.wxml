@@ -1,2 +1,3 @@
 <!--pages/home/home.wxml-->
 <text>pages/home/home.wxml</text>
+<navigator url="/pages/mall1/mall1?id=666">点我</navigator>

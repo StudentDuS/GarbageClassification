@@ -1,25 +1,51 @@
 {
   "pages": [
+    "pages/scan/scan",
     "pages/index/index",
-    "pages/home/home"
+    "pages/home/home",
+    "pages/mall/mall",
+    "pages/navigation/navigation",
+    "pages/redirect/mall2/mall2",
+    "pages/redirect/mall1/mall1",
+    "pages/redirect/camera/camera"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarBackgroundColor": "#0fff0e",
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "我的标题"
+    "navigationBarTitleText": "垃圾分类"
   },
   "tabBar": {
-    "selectedColor": "#ff0000",
+    "selectedColor": "#02fc08",
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "text": "首页",
-        "iconPath": "static/tabbar/图片 2.png",
-        "selectedIconPath": "static/tabbar/图片 4.png"
+        "pagePath": "pages/scan/scan",
+        "text": "识别",
+        "iconPath": "static/tabbar/扫描.png",
+        "selectedIconPath": "static/tabbar/扫描1.png"
+      },
+      {
+        "pagePath": "pages/mall/mall",
+        "text": "商城",
+        "iconPath": "static/tabbar/购物车.png",
+        "selectedIconPath": "static/tabbar/购物车1.png"
       },
       {
         "pagePath": "pages/home/home",
-        "text": "我的"
+        "text": "我的",
+        "iconPath": "static/tabbar/我的.png",
+        "selectedIconPath": "static/tabbar/我的1.png"
+      },
+      {
+        "pagePath": "pages/navigation/navigation",
+        "text": "导航",
+        "iconPath": "static/tabbar/导航.png",
+        "selectedIconPath": "static/tabbar/导航1.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "index",
+        "iconPath": "static/tabbar/图片 4.png",
+        "selectedIconPath": "static/tabbar/图片 5.png"
       }
     ]
   },

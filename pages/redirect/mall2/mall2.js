@@ -1,4 +1,4 @@
-// pages/index.js
+// pages/redirect/mall2/mall2.js
 Page({
 
   /**

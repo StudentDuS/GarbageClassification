@@ -1,11 +1,11 @@
-// pages/index/index.js
+// pages/camera/camera.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    message:"这是一个绑定信息"
+
   },
 
   /**
@@ -62,5 +62,19 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  takePhoto() {
+    const ctx = wx.createCameraContext()
+    ctx.takePhoto({
+      quality: 'high',
+      success: (res) => {
+        this.setData({
+          src: res.tempImagePath
+        })
+      }
+    })
+  },
+  error(e) {
+    console.log(e.detail)
   }
 })

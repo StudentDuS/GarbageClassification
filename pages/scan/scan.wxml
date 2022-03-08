@@ -1,0 +1,6 @@
+<!--pages/scan/scan.wxml-->
+<text>垃圾分类</text>
+<view class="scanclass" bindtap="clickMe">
+    <image src="/static/tabbar/scan.png"></image>
+    <text>点击识别</text>
+</view>
