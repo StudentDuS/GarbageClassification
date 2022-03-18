@@ -1,0 +1,14 @@
+<!--pages/scan/result/result.wxml-->
+<text class="title">结果：{{msg}}</text>
+<view class="container">
+  <view wx:for="{{result}}" wx:key="key">
+    <view id="{{index}}" class="message">
+    <text class="title" user-select="true">物品：{{item.name}}<text class="pro" user-select="true">(概率{{item.trust}})</text></text>
+    <text wx:if="{{item.lajitype == 0}}" class="m" user-select="true">\n类别：可回收垃圾。 <text class="s" user-select="true">\n小贴士：{{item.lajitip}}</text></text>
+    <text wx:elif="{{item.lajitype == 1}}" class="m" user-select="true">\n类别：有害垃圾。 <text class="s" user-select="true">\n小贴士：{{item.lajitip}}</text></text>
+    <text wx:elif="{{item.lajitype == 2}}" class="m" user-select="true">\n类别：厨余（湿）垃圾。<text class="s" user-select="true">\n小贴士：{{item.lajitip}}</text></text>
+    <text wx:elif="{{item.lajitype == 3}}" class="m" user-select="true">\n类别：其他（干）垃圾。<text class="s" user-select="true">\n小贴士：{{item.lajitip}}</text></text>
+    </view>
+  </view>
+</view>
+<button style="position: relative; left: -19rpx; top: 975rpx; width: 643rpx; height: 104rpx; display: block; box-sizing: border-box" bindtap="click">返回</button>

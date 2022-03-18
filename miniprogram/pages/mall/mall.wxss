@@ -1,0 +1,45 @@
+/* pages/mall/mall.wxss */
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.left{
+  display: flex;
+  flex-direction: column;
+  justify-content:left;
+}
+.right{
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+}
+block{
+  display: flex;
+  flex-direction: column;
+}
+#t {
+  margin-bottom: 200rpx;
+}
+
+.title {
+  text-align: center;
+  font-size: 40rpx;
+  color: green;
+}
+
+ image {
+  height: 400rpx;
+  width: 400rpx;
+}
+.name {
+  text-align: center;
+  color: green;
+}

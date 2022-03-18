@@ -1,0 +1,21 @@
+/* pages/scan/result/result.wxss */
+.container{
+  border: green;
+  padding: 10rpx;
+}
+.message text{
+  color: rgb(16, 192, 16);
+}
+.title{
+  color: rgb(16, 192, 16);
+  font-size: 50rpx;
+}
+.pro{
+  font-size: 30rpx;
+}
+.m{
+  font-size: 50rpx;
+}
+.s{
+  font-size: 30rpx;
+}

@@ -14,14 +14,28 @@
       "list": [
         {
           "name": "",
-          "pathName": "pages/scan/scan",
+          "pathName": "pages/index/index",
           "query": "",
           "launchMode": "default",
           "scene": null
         },
         {
           "name": "",
-          "pathName": "pages/scan/result/result",
+          "pathName": "pages/navigation/navigation",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/index/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/mall/mall",
           "query": "",
           "scene": null,
           "launchMode": "default"

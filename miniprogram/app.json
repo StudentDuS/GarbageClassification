@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/scan/scan",
+    "pages/index/index",
+    "pages/home/home",
+    "pages/mall/mall",
+    "pages/navigation/navigation",
+    "pages/redirect/mall2/mall2",
+    "pages/redirect/mall1/mall1",
+    "pages/scan/result/result",
+    "pages/home/dingdan/dingdan",
+    "pages/home/jifen/jifen",
+    "pages/home/shibie/shibie"
+
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#0fff0e",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "垃圾分类"
+  },
+  "tabBar": {
+    "selectedColor": "#02fc08",
+    "list": [
+      {
+        "pagePath": "pages/scan/scan",
+        "text": "识别",
+        "iconPath": "static/tabbar/扫描.png",
+        "selectedIconPath": "static/tabbar/扫描1.png"
+      },
+      {
+        "pagePath": "pages/mall/mall",
+        "text": "商城",
+        "iconPath": "static/tabbar/购物车.png",
+        "selectedIconPath": "static/tabbar/购物车1.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "我的",
+        "iconPath": "static/tabbar/我的.png",
+        "selectedIconPath": "static/tabbar/我的1.png"
+      },
+      {
+        "pagePath": "pages/navigation/navigation",
+        "text": "导航",
+        "iconPath": "static/tabbar/导航.png",
+        "selectedIconPath": "static/tabbar/导航1.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "考试",
+        "iconPath": "static/tabbar/考试.png",
+        "selectedIconPath": "static/tabbar/考试1.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于显示"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+<!--pages/mall/mall.wxml-->
+<view class="menu">
+  <view id="t">
+    <text class="title">垃圾分类坚持做,积分免费换好礼</text>
+  </view>
+  <view class="container">
+  <view class="left">
+    <block  wx:for="{{leftList}}" wx:key="*this">
+      <image src="{{item}}" bindtap="clickMe"></image>
+      <text>第{{index}}件商品</text>
+    </block>
+  </view>
+  
+    <view class="right">
+      <block  wx:for="{{leftList}}" wx:key="*this">
+      <image src="{{item}}" bindtap="clickMe"></image>
+      <text>第{{index}}件商品</text>
+    </block>
+    </view>
+    
+
+  </view>
+</view>

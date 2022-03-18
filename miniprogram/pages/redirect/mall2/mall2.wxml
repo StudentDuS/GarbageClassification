@@ -1,0 +1,8 @@
+<!--pages/redirect/mall2/mall2.wxml-->
+<view>
+  <text>兑换商品详情</text>
+</view>
+<view>
+<image src="cloud://garbage-classificati-9b61bfdf794.6761-garbage-classificati-9b61bfdf794-1310185794/static/img/goods/商品B.png"></image>
+</view>
+<view>点击兑换</view>

@@ -1,0 +1,9 @@
+<!--pages/navigation/navigation.wxml-->
+<map name="位置"></map>
+<text style="position: relative; left: -1rpx; top: 122rpx">{{localPath}}</text>
+<button type="primary" style="position: relative; left: -8rpx; top: 211rpx; width: 666rpx; height: 106rpx; display: block; box-sizing: border-box"  bindtap="click">点击获取位置</button>
+
+
+
+
+

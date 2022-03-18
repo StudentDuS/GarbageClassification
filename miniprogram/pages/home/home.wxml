@@ -1,0 +1,64 @@
+<view class="head" style="display: flex">
+  <block wx:if="{{!hasUserInfo}}">
+      <view class="touxiang">
+        <image src="/static/tabbar/yonghu.png"></image>   
+      </view>
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile" class="denglu" style="display: flex"> 登录 </button>
+      <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+  </block>
+  <block wx:else>
+      <image bindtap="bindViewTap" class="touxiang" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <view class="nickname">
+        {{userInfo.nickName}}
+      </view>
+      <view class="points">
+        <image src="/static/tabbar/积分.png"></image>
+      </view>
+      <view class="points-text">
+        <text>{{points}}</text>
+      </view>
+  </block>
+
+</view>
+
+<view style="display: flex; flex-direction: row; height: 275rpx; padding: 10px; margin: 10px; width: 704rpx; box-sizing: border-box">
+  <view style=" flex: 1;" bindtap="shibie">
+    <view class="mo">
+      <image src="/static/tabbar/lishijilu.png"></image>
+      
+    </view>
+    <view class="text">
+      识别记录
+    </view>
+  </view>
+  <view style=" flex: 1;" bindtap="jifen">
+    <view class="mo">
+      <image src="/static/tabbar/duihuan.png"></image>
+      
+    </view>
+    <view class="text">
+      积分记录
+    </view>
+  </view>
+  <view style=" flex: 1;" bindtap="dingdan">
+    <view class="mo">
+      <image src="/static/tabbar/gouwuche.png"></image>
+      
+    </view>
+    <view class="text">
+      我的订单
+    </view>
+  </view>
+</view>
+
+<view style="display: flex; flex-direction: row; height: 275rpx; padding: 10px; margin: 10px; width: 263rpx; box-sizing: border-box">
+  <view style=" flex: 1;">
+    <view class="mo">
+      <image src="/static/tabbar/xiaoxi.png"></image>
+    
+    </view>
+    <view class="text">
+      联系客服
+    </view>
+  </view>
+</view>

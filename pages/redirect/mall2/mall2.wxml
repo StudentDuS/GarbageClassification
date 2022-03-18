@@ -1,8 +1,0 @@
-<!--pages/redirect/mall2/mall2.wxml-->
-<view>
-  <text>兑换商品详情</text>
-</view>
-<view>
-<image src="/static/img/商品B.png"></image>
-</view>
-<view>点击兑换</view>
