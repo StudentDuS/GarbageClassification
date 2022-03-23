@@ -1,11 +1,27 @@
 <!--pages/index/index.wxml-->
-<text>span</text>
-<view class="c1">div</view>
-<view class="container">
-  <image wx:for="{{imageList}}" src="{{item}}"></image>
+
+<view style="display:flex; flex-direction:column; height: 150px; padding: 10px; margin-bottom: 10px;">
+  <view style="background-color: #F1F1F1; width: 704rpx; height: 134rpx; display: block; box-sizing: border-box">
+    <text style="position: relative; left: 277rpx; top: 0rpx" class="c1">问题</text>
+  </view>
+  <view style="background-color: #E6E6E6; flex: 1;">
+    <textarea name="" id="" cols="30" rows="10" style="width: 535rpx; height:200rpx; display: block; box-sizing: border-box; left: 73rpx; top: 29rpx; position: relative" class="c2">{{Garbage}}是哪种垃圾？</textarea>
+  </view>
+  <view style="background-color: #F1F1F1; flex: 1;">
+    <radio-group class="radio-group" bindchange="choise">
+      <label class="label" wx:for="{{['可回收垃圾','有害垃圾','厨余垃圾','其他垃圾']}}" wx:key="key">
+        <view class="weui-cell__hd">
+          <radio value="{{item}}" checked="{{CheckStatus}}"> </radio>
+        </view>
+        <view class="weui-cell__bd" class="c2">{{item}}</view>
+      </label>
+    </radio-group>
+  </view>
+  <view style="background-color: #F1F1F1; flex: 1; margin-top: 50rpx;">
+    <view  wx:if="{{status==true}}">
+      <text>{{istrue}}\n</text>
+      <text>答案:{{ans}}</text>
+    </view>
+  </view>
 </view>
-<view>用户名：{{name}}</view>
-<view>数据：{{message}}</view>
-<image src="{{path}}" style="width: 340rpx; height: 305rpx; display: inline-block; box-sizing: border-box"></image>
-<view bindtap="imageLoad">点击上传图片</view>
-<button style="position: relative; left: 1rpx; top: 247rpx; width: 479rpx; height: 90rpx; display: block; box-sizing: border-box" open-type="getUserInfo" bindgetuserinfo="getUserName">按钮</button>
+<button bindtap="next" style="position: relative; left: 1rpx; top: 373rpx" wx:if="{{status==true}}">下一题</button>

@@ -77,7 +77,7 @@ Page({
       sourceType: ['album', 'camera'],
       camera: 'back',
       sizeType: ['compressed'],
-      success(res) {
+      success:function(res) {
         //console.log(res.tempFiles.tempFilePath)
         //console.log(res);
         that.setData({ src: res.tempFiles[0].tempFilePath });

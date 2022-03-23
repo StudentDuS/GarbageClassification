@@ -1,5 +1,9 @@
 <!--pages/scan/scan.wxml-->
-<text>垃圾分类</text>
+<view>
+<text class="title">垃圾分类,特别鸣谢：\n</text>
+<image class="pic" src="cloud://garbage-classificati-9b61bfdf794.6761-garbage-classificati-9b61bfdf794-1310185794/static/img/r-logo.png"></image>
+</view>
+
 <view class="scanclass" bindtap="takePhoto">
     <image src="/static/tabbar/scan.png"></image>
     <text>点击识别</text>

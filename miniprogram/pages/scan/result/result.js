@@ -25,7 +25,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    console.log("result onReady")
+    //console.log("result onReady")
   },
 
   /**
@@ -44,7 +44,7 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-    console.log("result onHide")
+    //console.log("result onHide")
   },
 
   /**

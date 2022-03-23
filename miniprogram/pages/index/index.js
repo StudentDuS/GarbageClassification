@@ -1,14 +1,18 @@
 // pages/index/index.js
-Page({
+const db = wx.cloud.database();
+var app = getApp();
 
+Page({
   /**
    * 页面的初始数据
    */
   data: {
-    message: "这是一个绑定信息",
-    name:"",
-    path:"cloud://garbage-classificati-9b61bfdf794.6761-garbage-classificati-9b61bfdf794-1310185794/static/tabbar/图片 2.png",
-    imageList:["cloud://garbage-classificati-9b61bfdf794.6761-garbage-classificati-9b61bfdf794-1310185794/static/tabbar/图片 2.png","cloud://garbage-classificati-9b61bfdf794.6761-garbage-classificati-9b61bfdf794-1310185794/static/tabbar/图片 2.png","cloud://garbage-classificati-9b61bfdf794.6761-garbage-classificati-9b61bfdf794-1310185794/static/tabbar/图片 2.png"]
+    Garbage:"",
+    sq:0,
+    ans:"",
+    status:false,
+    CheckStatus:false,
+    istrue:""
   },
 
   /**
@@ -29,6 +33,19 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    var that = this;
+    db.collection("GarbageClassification").get({
+      success: function (res) {
+       // console.log(res);
+        var GarbageList=res.data;
+        //保存数据
+        app.globalData.GarbageList = GarbageList;
+        //设置初始垃圾名和类型
+        that.setData({ans:GarbageList[0].type ,
+        Garbage:GarbageList[0].Garbage});
+
+      }
+    })
 
   },
 
@@ -66,31 +83,49 @@ Page({
   onShareAppMessage: function () {
 
   },
-  /*
-  */
-  getUserName: function () {
-    var that = this;
-    wx.getUserInfo({
-      success: function (res) {
-        console.log(res)
-        that.setData({message:"已经点击",name:res.userInfo.nickName,path:"cloud://garbage-classificati-9b61bfdf794.6761-garbage-classificati-9b61bfdf794-1310185794/static/tabbar/图片 3.png"})
-      },
-      fail: function (res) {
-
-      }
-    })
-  },
-  /**
+    /**
    * 
    */
-  imageLoad:function(){
-    var that=this;
-    wx.chooseImage({
-      sizeType:['original', 'compressed'],
-      sourceType:['album', 'camera'],
-     success:function(res){
-       that.setData({imageList:that.data.imageList.concat(res.tempFilePaths)});
-     }
-    })
+  next: function () {
+ 
+  var sq=(this.data.sq+1)%18;
+   var GarbageList = app.globalData.GarbageList;
+   var Garbage=GarbageList[sq].Garbage
+   //设置下一个垃圾名、编号、类型
+   this.setData({Garbage:Garbage ,sq:sq,ans:GarbageList[sq].type});
+
+   //隐藏结果和下一题按钮
+    this.setData({status:false})
+    this.setData({CheckStatus:false})
+   
+  },
+    /**
+   * 
+   */
+  choise:function (res) {
+    if (res.detail.value==this.data.ans){
+      this.setData({istrue:"回答正确"})
+      console.log(res.detail.value,this.data.ans)
+    }else{
+      this.setData({istrue:"回答错误"})
+      console.log(res.detail.value,this.data.ans)
+    }
+    //打开结果和下一题按钮
+    this.setData({status:true});
+    //
+
   }
+  // createArr: function (num) {
+  //   let arr = [];
+  //   for (let i = 0; i < num; i++) {
+  //     arr.push(i + 1);
+  //   }
+  //   let result = [];
+  //   for (let i = arr.length - 1; i > 0; i--) {
+  //     let rand = Math.ceil(Math.random() * i);//根据arr数组长度，随机产生一个索引
+  //     //从原数组arr把该索引的元素删除，并加入到result数组--便是随机产生啦
+  //     result.push(arr.splice(rand, 1));
+  //   }
+  //   return result;
+  // }
 })

@@ -16,3 +16,11 @@
 .scanclass text{
   color: green;
 }
+.title{
+  font-size: 50rpx;
+  color: green;
+}
+.pic{
+  height: 100rpx;
+  width: 400rpx;
+}

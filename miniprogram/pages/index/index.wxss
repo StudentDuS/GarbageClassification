@@ -1,31 +1,28 @@
 /* pages/index/index.wxss */
 .c1 {
   color: red;
+  text-align: left;
+  
 }
-
-image {
-  width: 100rpx;
-  height: 100rpx;
-  border-radius: 50rpx;
-}
-
-.menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-.menu .item{
-display: flex;
-flex-direction: column;
-}
-.menu text{
-  color: #25e04d;
-  text-align: center;
+.c2 {
+  color: green;
 }
 .container{
   display: flex;
   flex-direction: row;
   justify-content:left;
   align-items: center;
+}
+.radio-group{
+  display: flex;
+  flex-direction: column;
+  justify-content:left;
+  align-items: left;
+}
+.label{
+  display: flex;
+  flex-direction: row;
+  justify-content:left;
+  align-items: center;
+  margin: 2rpx;
 }
